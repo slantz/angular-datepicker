@@ -9,7 +9,7 @@
         (navigator.userAgent.match(/Android/i) ||
         navigator.userAgent.match(/webOS/i) ||
         navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPad/i) ||p
         navigator.userAgent.match(/iPod/i) ||
         navigator.userAgent.match(/BlackBerry/i) ||
         navigator.userAgent.match(/Windows Phone/i))) {
@@ -351,7 +351,7 @@
             $scope.monthNumber += 1;
           }
           //set next month
-          $scope.month = $filter('date')(new Date($scope.year, $scope.monthNumber - 1), 'MMMM');
+          $scope.month = $filter('date')(new Date($scope.year, $scope.monthNumber), 'MMMM');
           //reinit days
           setDaysInMonth($scope.monthNumber, $scope.year);
 
@@ -380,7 +380,7 @@
             $scope.monthNumber -= 1;
           }
           //set next month
-          $scope.month = $filter('date')(new Date($scope.year, $scope.monthNumber - 1), 'MMMM');
+          $scope.month = $filter('date')(new Date($scope.year, $scope.monthNumber), 'MMMM');
           //reinit days
           setDaysInMonth($scope.monthNumber, $scope.year);
           //check if min date is ok
